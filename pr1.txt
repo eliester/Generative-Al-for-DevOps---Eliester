@@ -1,0 +1,9 @@
+ Add S3 bucket for production logs
+
+resource "aws_s3_bucket" "logs_bucket" {
+  bucket = "company-prod-logs"
+
+  tags = {
+    Environment = "production"
+  }
+}
